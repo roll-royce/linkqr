@@ -1,0 +1,8 @@
+com\linkqr\controllers\LoginController.class
+com\linkqr\controllers\RegisterController.class
+com\linkqr\Main.class
+com\linkqr\test\TestConnection.class
+module-info.class
+com\linkqr\utils\DatabaseConnection.class
+com\linkqr\controllers\DashboardController.class
+com\linkqr\utils\QRCodeGenerator.class

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.linkqr.controllers.DashboardController"
+    prefWidth="600" prefHeight="500">
+
+    <children>
+        <!-- Title Label -->
+        <Label text="Dashboard - LinkQR" layoutX="220" layoutY="20"
+            style="-fx-font-size: 20px; -fx-font-weight: bold;" />
+
+        <!-- User Profile Picture -->
+        <ImageView fx:id="userPhoto" layoutX="250" layoutY="50" fitWidth="100" fitHeight="100"
+            style="-fx-border-radius: 50%;" />
+
+        <!-- Change Photo Button (FIXED) -->
+        <Button fx:id="changePhotoButton" text="Change Photo" layoutX="250" layoutY="160" prefWidth="100"
+            onAction="#handleChangePhoto"
+            style="-fx-background-color: #007bff; -fx-text-fill: white;" />
+
+        <!-- QR Code List -->
+        <Label text="Your QR Codes:" layoutX="50" layoutY="200" />
+        <ListView fx:id="qrListView" layoutX="50" layoutY="220" prefWidth="500" prefHeight="150" />
+
+        <!-- Folder Selection (FIXED) -->
+        <Label text="QR Code Save Location:" layoutX="50" layoutY="380" />
+        <TextField fx:id="folderPathField" layoutX="50" layoutY="400" prefWidth="400"
+            promptText="Select folder to save QR codes" />
+        <Button fx:id="browseFolderButton" text="Browse" layoutX="460" layoutY="400" prefWidth="80"
+            onAction="#handleBrowseFolder" />
+
+        <!-- Logout Button (FIXED) -->
+        <Button fx:id="logoutButton" text="Logout" layoutX="250" layoutY="450" prefWidth="100"
+            onAction="#handleLogout"
+            style="-fx-background-color: #dc3545; -fx-text-fill: white;" />
+    </children>
+
+</AnchorPane>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.linkqr.controllers.LoginController"
+    prefWidth="450" prefHeight="300">
+
+    <children>
+        <!-- Title Label -->
+        <Label text="Login to LinkQR" layoutX="140" layoutY="20"
+            style="-fx-font-size: 20px; -fx-font-weight: bold;" />
+
+        <!-- Username/Email Field -->
+        <Label text="Username or Email:" layoutX="50" layoutY="70" />
+        <TextField fx:id="usernameField" layoutX="50" layoutY="90" prefWidth="350"
+            promptText="Enter your username or email" />
+
+        <!-- Password Field -->
+        <Label text="Password:" layoutX="50" layoutY="130" />
+        <PasswordField fx:id="passwordField" layoutX="50" layoutY="150" prefWidth="350"
+            promptText="Enter your password" />
+
+        <!-- Login Button -->
+        <Button text="Login" layoutX="50" layoutY="200" prefWidth="100"
+            onAction="#handleLogin"
+            style="-fx-background-color: #28a745; -fx-text-fill: white; -fx-font-size: 14px; -fx-font-weight: bold;" />
+
+        <!-- Register Hyperlink -->
+        <Label text="Don't have an account?" layoutX="170" layoutY="205" />
+        <Hyperlink text="Register Here" layoutX="300" layoutY="205" onAction="#handleGoToRegister" />
+    </children>
+</AnchorPane>

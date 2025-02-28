@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.linkqr.controllers.RegisterController"
+    prefWidth="450" prefHeight="500">
+
+    <children>
+        <!-- Title Label -->
+        <Label text="User Registration" layoutX="130" layoutY="20" style="-fx-font-size: 20px; -fx-font-weight: bold;" />
+
+        <!-- Username Field -->
+        <Label text="Username:" layoutX="50" layoutY="60" />
+        <TextField fx:id="usernameField" layoutX="50" layoutY="80" prefWidth="350" promptText="Enter a unique username" />
+
+        <!-- Full Name Field -->
+        <Label text="Full Name:" layoutX="50" layoutY="120" />
+        <TextField fx:id="nameField" layoutX="50" layoutY="140" prefWidth="350" promptText="Enter your full name" />
+
+        <!-- Age Field -->
+        <Label text="Age:" layoutX="50" layoutY="180" />
+        <TextField fx:id="ageField" layoutX="50" layoutY="200" prefWidth="350" promptText="Enter your age" />
+
+        <!-- Gender Dropdown -->
+        <Label text="Gender:" layoutX="50" layoutY="240" />
+        <ComboBox fx:id="genderCombo" layoutX="50" layoutY="260" prefWidth="350">
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="Male"/>
+                    <String fx:value="Female"/>
+                    <String fx:value="Other"/>
+                </FXCollections>
+            </items>
+        </ComboBox>
+
+        <!-- City Field -->
+        <Label text="City:" layoutX="50" layoutY="300" />
+        <TextField fx:id="cityField" layoutX="50" layoutY="320" prefWidth="350" promptText="Enter your city" />
+
+        <!-- Email Field -->
+        <Label text="Email:" layoutX="50" layoutY="360" />
+        <TextField fx:id="emailField" layoutX="50" layoutY="380" prefWidth="350" promptText="Enter your email address" />
+
+        <!-- Password Field -->
+        <Label text="Password:" layoutX="50" layoutY="420" />
+        <PasswordField fx:id="passwordField" layoutX="50" layoutY="440" prefWidth="350" promptText="Enter a strong password" />
+
+        <!-- Confirm Password Field -->
+        <Label text="Confirm Password:" layoutX="50" layoutY="480" />
+        <PasswordField fx:id="confirmPasswordField" layoutX="50" layoutY="500" prefWidth="350" promptText="Re-enter your password" />
+
+        <!-- Register Button -->
+        <Button text="Register" layoutX="150" layoutY="540" prefWidth="150" onAction="#handleRegister"
+            style="-fx-background-color: #007bff; -fx-text-fill: white; -fx-font-size: 14px; -fx-font-weight: bold;" />
+
+        <!-- Hyperlink to Go Back to Login -->
+        <Label text="Already have an account?" layoutX="130" layoutY="580" />
+        <Hyperlink text="Login Here" layoutX="280" layoutY="580" onAction="#goToLogin" />
+    </children>
+
+</AnchorPane>
